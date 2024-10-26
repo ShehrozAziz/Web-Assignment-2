@@ -17,7 +17,7 @@ export default {
         },
         move: {
           '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(-2px)' },
+          '50%': { transform: 'translateX(-6px)' },
         },
       },
       animation: {

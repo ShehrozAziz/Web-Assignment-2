@@ -74,7 +74,13 @@ const Weather = () => {
                 <img
                   src={`https:${weatherData.current.condition.icon}`}
                   alt="Current Weather Icon"
-                  className="w-48 h-48"
+                  className={`w-48 h-48 ${
+                    ["Sunny", "Clear"].includes(
+                      weatherData.current.condition.text
+                    )
+                      ? "animate-rotate"
+                      : "animate-move"
+                  }`}
                 />
                 <div className="text-left">
                   <p className="font-semibold text-lg">Today</p>
@@ -108,7 +114,11 @@ const Weather = () => {
                     alt={`Forecast Icon for ${new Date(
                       day.date
                     ).toLocaleDateString("en-US", { weekday: "long" })}`}
-                    className="w-36 h-36 my-1 animate-move"
+                    className={`w-36 h-36 ${
+                      ["Sunny", "Clear"].includes(day.day.condition.text)
+                        ? "animate-rotate"
+                        : "animate-move"
+                    }`}
                   />
                   <p className="text-xl">{day.day.avgtemp_c}°C</p>
                 </div>
