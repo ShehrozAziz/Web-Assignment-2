@@ -18,7 +18,7 @@ const Weather = () => {
         days: "4",
       },
       headers: {
-        "x-rapidapi-key": "3e18f895e3msh803469290374eefp1e6ceejsn41f04eca0e77",
+        "x-rapidapi-key": "API_KEY",
         "x-rapidapi-host": "weatherapi-com.p.rapidapi.com",
       },
     };
